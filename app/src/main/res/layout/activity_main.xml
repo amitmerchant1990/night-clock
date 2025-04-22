@@ -1,40 +1,54 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <TextView
-        android:id="@+id/dateText"
+    <LinearLayout
+        android:id="@+id/clockWrapper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12th Feb, 2025"
-        android:textColor="#00FF00"
-        android:textSize="26sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"
-        android:layout_above="@+id/clockText"
-        android:fontFamily="monospace"
-        android:layout_centerVertical="true"
-        android:layout_centerInParent="true" />
-
-    <TextView
-        android:id="@+id/clockText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="08:42 PM"
-        android:textColor="#00FF00"
-        android:maxLines="1"
-        android:ellipsize="none"
-        android:textStyle="bold"
-        android:textAlignment="center"
+        android:orientation="vertical"
         android:gravity="center"
-        android:autoSizeTextType="uniform"
-        android:autoSizeMinTextSize="64sp"
-        android:autoSizeMaxTextSize="120sp"
-        android:autoSizeStepGranularity="2sp"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="monospace" />
-</RelativeLayout>
+        android:layout_gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12th Feb, 2025"
+            android:textColor="#00FF00"
+            android:textSize="26sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/clockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:42 PM"
+            android:textColor="#00FF00"
+            android:maxLines="1"
+            android:ellipsize="none"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="64sp"
+            android:autoSizeMaxTextSize="120sp"
+            android:autoSizeStepGranularity="2sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/infoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_info_24"
+        android:contentDescription="Info"
+        android:tint="#00FF00" />
+
+</FrameLayout>
