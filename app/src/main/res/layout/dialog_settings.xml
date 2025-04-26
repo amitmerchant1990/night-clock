@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="always"
+    android:fadingEdgeLength="50dp"
+    android:scrollbars="vertical"
+    android:requiresFadingEdge="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/colorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your Clock Color"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"/>
+
+        <RadioGroup
+            android:id="@+id/colorOptions"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electric Forest"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioPink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Midnight Bloom"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lunar Flame"
+                android:textColor="@android:color/black" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Silent Snow"
+                android:textColor="@android:color/black" />
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/showDateCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Date"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

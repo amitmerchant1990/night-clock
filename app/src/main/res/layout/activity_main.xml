@@ -41,14 +41,30 @@
             android:fontFamily="monospace" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/infoIcon"
+    <LinearLayout
+        android:id="@+id/iconContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|top"
-        android:layout_margin="16dp"
-        android:src="@drawable/baseline_info_24"
-        android:contentDescription="Info"
-        android:tint="#00FF00" />
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/settingsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_settings_24"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Settings"
+            android:tint="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/infoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_info_24"
+            android:contentDescription="Info"
+            android:tint="@android:color/white"/>
+    </LinearLayout>
 
 </FrameLayout>
