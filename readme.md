@@ -1,8 +1,10 @@
-![Night Clock](assets/icon.png)
+<img src="/assets/icon.png" alt="Night Clock" width="200"/>
 # Night Clock (Always On)
 
 A minimal, distraction-free clock that keeps your screen always on — perfect for your bedside or desk.  
 Simple, clean, and designed to shine through the night without burning your eyes.
+
+<a href="https://play.google.com/store/apps/details?id=com.amitmerchant.nightclockalwayson"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="48"></a>
 
 ## Features
 
