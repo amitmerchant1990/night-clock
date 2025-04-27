@@ -10,7 +10,7 @@ Simple, clean, and designed to shine through the night without burning your eyes
 ## Features
 
 - **Always On Display** — Your clock stays visible, no screen dimming.
-- **Custom Clock Colors** — Choose from Neon Green, Magenta Pink, Electric Yellow, or Pure White.
+- **Custom Clock Colors** — Choose from **Electric Forest**, **Midnight Bloom**, **Lunar Flame**, or **Silent Snow**.
 - **Optional Date Display** — Show or hide the date based on your preference.
 - **Landscape & Portrait Support** — Rotate freely even if device rotation is disabled.
 
