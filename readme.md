@@ -1,4 +1,5 @@
-<img src="/assets/icon.png" alt="Night Clock" width="200"/>
+<img src="/assets/icon.png" alt="Night Clock" width="150"/>
+
 # Night Clock (Always On)
 
 A minimal, distraction-free clock that keeps your screen always on — perfect for your bedside or desk.  
