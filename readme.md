@@ -20,18 +20,13 @@ Simple, clean, and designed to shine through the night without burning your eyes
 |:--------------------------------------------------:|:--------------------------------------------------:|:--------------------------------------------------:|
 | ![Night Mode](assets/screenshots/screenshot-1.png) | ![Night Mode](assets/screenshots/screenshot-2.png) | ![Night Mode](assets/screenshots/screenshot-3.png) |
 
-## Contributing
+## Contributions
 
-Contributions are warmly welcome! ✨
+Contributions to this project are welcome, but must be approved in writing by the project maintainer.
 
-If you have ideas for new features, improvements, or bug fixes:
-- Fork this repo 🍴
-- Create a new branch 🔧
-- Make your changes 🌟
-- Submit a Pull Request 📬
+By submitting a contribution (code, documentation, or other materials), you agree to grant the project maintainer (Amit Merchant) all rights to use, modify, and distribute your contribution under the project's existing license.
 
-Guidelines:
-Please keep your code clean, readable, and respectful of the app’s minimalistic spirit.
+Unsolicited contributions may be rejected.
 
 ## Support & Donations
 
