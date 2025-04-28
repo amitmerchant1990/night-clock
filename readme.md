@@ -22,11 +22,11 @@ Simple, clean, and designed to shine through the night without burning your eyes
 
 ## Contributions
 
-Contributions to this project are welcome, but must be approved in writing by the project maintainer.
+Contributions are welcome and appreciated!
 
-By submitting a contribution (code, documentation, or other materials), you agree to grant the project maintainer (Amit Merchant) all rights to use, modify, and distribute your contribution under the project's existing license.
+If you'd like to improve **Night Clock (Always On)** — whether by fixing bugs, adding features, or improving documentation — please fork the repository and submit a pull request.
 
-Unsolicited contributions may be rejected.
+By contributing, you agree that your contributions will be licensed under the MIT License along with the rest of the project.
 
 ## Support & Donations
 
@@ -36,8 +36,4 @@ If you find this project helpful, consider fueling the creator’s late-night co
 
 ## License
 
-This project is **closed source** and **all rights are reserved**.
-
-Unauthorized use, copying, modification, distribution, or sale of this software is strictly prohibited without prior written permission from the author.
-
-For licensing inquiries, please contact: [bullredeyes@gmail.com](mailto:bullredeyes@gmail.com)
+MIT License. See [LICENSE](license.md) for details.
