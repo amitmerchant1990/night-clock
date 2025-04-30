@@ -66,5 +66,12 @@
             android:layout_height="wrap_content"
             android:text="Show Date"
             android:layout_marginTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/use24HourFormatCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use 24-Hour Format"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </ScrollView>

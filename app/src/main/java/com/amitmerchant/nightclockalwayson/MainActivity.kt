@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var clockText: TextView
     private lateinit var dateText: TextView
     private lateinit var rootLayout: ViewGroup
+    private val key24HourFormat = "use24HourFormat"
 
     private val handler = Handler(Looper.getMainLooper())
 
@@ -30,11 +31,34 @@ class MainActivity : AppCompatActivity() {
     private val idleHandler = android.os.Handler()
     private lateinit var settingsIcon: ImageView
     private lateinit var orientationListener: OrientationEventListener
+    private val driftHandler = Handler(Looper.getMainLooper())
 
     companion object {
         const val PREFS_NAME = "clock_settings"
         const val KEY_CLOCK_COLOR = "clock_color"
         const val KEY_SHOW_DATE = "show_date"
+    }
+
+    private val driftRunnable = object : Runnable {
+        override fun run() {
+            applyPixelDrift()
+            driftHandler.postDelayed(this, 5 * 60 * 1000) // Every 5 minutes
+        }
+    }
+
+    private fun applyPixelDrift() {
+        val driftRange = -5..5
+
+        listOf(clockText, dateText).forEach { view ->
+            val params = view.layoutParams as ViewGroup.MarginLayoutParams
+            params.setMargins(
+                driftRange.random(),
+                driftRange.random(),
+                0,
+                0
+            )
+            view.layoutParams = params
+        }
     }
 
     private val idleRunnable = Runnable {
@@ -61,7 +85,14 @@ class MainActivity : AppCompatActivity() {
         override fun run() {
             val now = Calendar.getInstance()
 
-            val timeFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+            val use24Hour = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                .getBoolean(key24HourFormat, false)
+
+            val timeFormat = SimpleDateFormat(
+                if (use24Hour) "HH:mm" else "hh:mm a",
+                Locale.getDefault()
+            )
+
             clockText.text = timeFormat.format(now.time)
 
             dateText.text = getFormattedDate(now)
@@ -133,10 +164,12 @@ class MainActivity : AppCompatActivity() {
         applyClockSettings()
 
         updateClock.run()
+        driftRunnable.run()
     }
 
     override fun onDestroy() {
         handler.removeCallbacks(updateClock)
+        driftHandler.removeCallbacks(driftRunnable)
         super.onDestroy()
     }
 
@@ -170,9 +203,10 @@ class MainActivity : AppCompatActivity() {
                     """
                 <font color='#000000'>
                 A minimal, distraction-free clock for your bedside.<br><br>
-                ✨ Developed by Amit Merchant<br><br>
+                ✨ Developed by <b><a href='https://amitmerchant.com'>Amit Merchant</a></b><br><br>
                 ☕ <a href='https://buymeacoffee.com/amitmerchant'>Buy Me a Coffee</a><br><br>
-                🌐 <a href='https://amitmerchant.com'>Website</a>
+                ⭐️ <a href='https://play.google.com/store/apps/details?id=com.amitmerchant.nightclockalwayson'>Rate this app</a><br><br>
+                👨‍💻 <a href='https://github.com/amitmerchant1990/night-clock'>Source Code</a><br><br>
                 </font>
                 """.trimIndent(),
                     Html.FROM_HTML_MODE_LEGACY
@@ -246,6 +280,9 @@ class MainActivity : AppCompatActivity() {
 
         val radioGroup = dialogView.findViewById<RadioGroup>(R.id.colorOptions)
         val showDateCheckbox = dialogView.findViewById<CheckBox>(R.id.showDateCheckbox)
+        val use24HourFormatCheckbox = dialogView.findViewById<CheckBox>(R.id.use24HourFormatCheckbox)
+        use24HourFormatCheckbox.isChecked = sharedPreferences.getBoolean(key24HourFormat, false)
+
 
         // Pre-select the current color
         when (currentColor) {
@@ -283,6 +320,7 @@ class MainActivity : AppCompatActivity() {
                 with(sharedPreferences.edit()) {
                     putInt(KEY_CLOCK_COLOR, selectedColor)
                     putBoolean(KEY_SHOW_DATE, isShowDateChecked)
+                    putBoolean(key24HourFormat, use24HourFormatCheckbox.isChecked)
                     apply()
                 }
 
@@ -315,6 +353,7 @@ class MainActivity : AppCompatActivity() {
 
         // Change checkbox text color
         showDateCheckbox.setTextColor(android.graphics.Color.BLACK)
+        use24HourFormatCheckbox.setTextColor(android.graphics.Color.BLACK)
 
         // Change buttons text color
         dialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(android.graphics.Color.BLACK)
@@ -331,6 +370,7 @@ class MainActivity : AppCompatActivity() {
         // Apply to CheckBox
         if (showDateCheckbox is AppCompatCheckBox) {
             showDateCheckbox.buttonTintList = colorStateList
+            use24HourFormatCheckbox.buttonTintList = colorStateList
         }
     }
 
