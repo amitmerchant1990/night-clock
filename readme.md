@@ -24,13 +24,13 @@ Simple, clean, and designed to shine through the night without burning your eyes
 
 Contributions are welcome and appreciated!
 
-If you'd like to improve **Night Clock (Always On)** — whether by fixing bugs, adding features, or improving documentation — please fork the repository and submit a pull request.
+If you'd like to improve **Night Clock (Always On)**, either by fixing bugs, adding features, or improving documentation, please fork the repository and submit a pull request.
 
 By contributing, you agree that your contributions will be licensed under the MIT License along with the rest of the project.
 
 ## Support & Donations
 
-If you find this project helpful, consider fueling the creator’s late-night coding sessions! 🙏
+If you find this project helpful, consider supporting it with a small donation! 🙏
 
 [Buy me a Coffee](https://buymeacoffee.com/amitmerchant)
 
