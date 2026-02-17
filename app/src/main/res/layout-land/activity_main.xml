@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="12th Feb, 2025"
             android:textColor="#00FF00"
-            android:textSize="26sp"
+            android:textSize="40sp"
             android:layout_marginBottom="8dp"
             android:fontFamily="monospace" />
 
@@ -35,8 +35,8 @@
             android:textAlignment="center"
             android:gravity="center"
             android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="64sp"
-            android:autoSizeMaxTextSize="120sp"
+            android:autoSizeMinTextSize="100sp"
+            android:autoSizeMaxTextSize="200sp"
             android:autoSizeStepGranularity="2sp" />
     </LinearLayout>
 
