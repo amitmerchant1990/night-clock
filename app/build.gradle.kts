@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace = "com.amitmerchant.nightclockalwayson"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.amitmerchant.nightclockalwayson"
         minSdk = 27
-        targetSdk = 35
-        versionCode = 8
-        versionName = "1.7"
+        targetSdk = 36
+        versionCode = 9
+        versionName = "1.8"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
